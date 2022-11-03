@@ -1,0 +1,178 @@
+
+.login{
+  width: 100%;
+  z-index: 999;
+  
+}
+Title,.login label{
+  font-weight: 500;
+ 
+}
+.logo{
+  margin-top: 20%;
+}
+
+.loginWrapper{
+  display:flex;
+  justify-content: center;
+  height:100%;
+}
+.Footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.leftWrapper{
+ align-self: center;
+ background-image: linear-gradient(to right, var(--gradientoption1) , var(--gradient2light));
+text-align: center;
+width:350px;
+height:410px;
+/* padding:5% 2% 2% 2%; */
+ box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+  border-radius: 15px 0px 0px 15px;
+}
+.leftWrapper p{
+  font-size: 22px;
+  font-weight: 500;
+}
+/* .img{
+  width:100px;
+  height:100px;
+} */
+.navbar-light {
+  background-color: #ffffff;
+  box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+}
+
+.auth-wrapper {
+  
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh !important;
+}
+.auth-innerlogin{
+  width: 450px;
+  margin: auto;
+  background: #ffffff;
+  box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+  padding: 50px 55px 53px 55px;
+  border-radius: 0px 15px 15px 0px !important;
+  
+}
+.submitbtn{
+  margin-left: 1%;
+}
+.auth-wrapper .form-control:focus {
+  border-color: #167bff;
+  box-shadow: 1px 1px 6px rgba(123, 128, 224, 0.2) !important;
+  box-shadow: none;
+}
+.auth-wrapper h3 {
+  text-align: center;
+  margin: 0;
+  line-height: 1;
+  padding-bottom: 20px;
+}
+.form-group{
+  margin-top: 10px !important;
+}
+.custom-control-label {
+  font-weight: 400;
+}
+.btn-primary{
+  margin-top: 10px;
+  background-color: var(--gradient1) !important;
+  border: none !important;
+  width: 100%;
+
+}
+.forgot-password,
+.forgot-password a {
+  text-align: right;
+  font-size: 13px;
+  padding-top: 10px;
+  color: #7f7d7d;
+  margin: 0;
+}
+.forgot-password a {
+  color: #167bff;
+}
+@media only screen and (max-width:870px ){
+  
+.loginWrapper{
+  flex-direction: column;
+ 
+}
+.login{
+  height:100vh !important;
+}
+.leftWrapper{
+  width: 450px;
+  border-radius: 15px 15px 0px 0px;
+  height:311px;
+  background-image: none;
+  box-shadow: none;
+}
+.auth-wrapper{
+  height: 0vh !important;
+}
+.AppName{
+  display: none;
+}
+.logo{
+  width:100px;
+  position: relative;
+}
+.auth-innerlogin{
+  border-radius: 30px 30px 30px 30px !important;
+}
+.loginWrapper{
+  height: 50%;
+}
+.Title{
+  margin-top: 5px;
+}
+
+}
+@media only screen and (max-width:870px ){
+  
+.loginWrapper{
+  flex-direction: column;
+ 
+}
+.login{
+  height:100vh !important;
+}
+.leftWrapper{
+  width: 450px;
+  border-radius: 15px 15px 0px 0px;
+  height:311px;
+  background-image: none;
+  box-shadow: none;
+}
+.auth-wrapper{
+  height: 0vh !important;
+}
+.AppName{
+  display: none;
+}
+.logo{
+  width:100px;
+  position: relative;
+  margin-top: 7%;
+}
+.auth-innerlogin{
+  border-radius: 30px 30px 30px 30px !important;
+}
+.loginWrapper{
+  height: 50%;
+}
+.Title{
+  margin-top: 5px;
+}
+
+}

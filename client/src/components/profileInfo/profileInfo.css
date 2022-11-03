@@ -1,0 +1,151 @@
+
+.profileInfoBox{
+  flex:2;
+  -webkit-box-shadow: 0px 0px 20px -10px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+  border-radius: 15px;
+  margin-right: 10px;
+  height:300px !important;
+}
+.profileEditBox{
+  flex:2;
+  -webkit-box-shadow: 0px 0px 20px -10px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+  border-radius: 15px;
+  margin-right: 10px;
+  height:375px !important;
+}
+.notificationIcon{
+  color: #2c96c7 !important;
+  font-size: 35px !important;
+  margin-right: 10px;
+}
+.profileImg{
+    width: 200px;
+    height: 150px;
+  margin-left: 20%;
+}
+.imgBox{
+  width: 100%;
+}
+.btn-light{
+ top:-25px;
+ margin-left: 70%;
+ box-shadow: 0px 0px 15px -7px #b1b3b4;
+ width: 30%;
+ border: none;
+background-color: rgb(231, 229, 229);
+outline: none;
+
+}
+.btn-success{
+
+  
+  box-shadow: 0px 0px 15px -15px #53cee6;
+  width: 60%;
+  border: none;
+  border-radius: 15px;
+  margin-top: 5%;
+  margin-left: 13%;
+  height: 30px !important;
+  background-image: linear-gradient(to right, var(--gradient1) , var(--gradient2));
+ outline: none;
+}
+
+.btn-success:hover {
+  background-image: linear-gradient(to right, var(--gradientoption1) , var(--gradient2light));
+}
+.editIcon{
+  color: var(--gradient1);
+  margin-top: 5%;
+}
+.group{
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+}
+.btn :active{
+  border: none !important;
+}
+.profileInfotopLeft input[type="text"]{
+  border-bottom: 1px solid rgb(231, 229, 229) !important;
+  border:none;
+  margin-top: 5%;
+  padding: 1%;
+  background-color: white;
+  
+  border-radius: 0;
+  outline: none;
+  font-weight: 500;
+  margin-left: 7%;
+  width: 100%;
+
+}
+.profileInfotopLeft input[type="password"]{
+  border-bottom: 1px solid rgb(231, 229, 229) !important;
+  border:none;
+  margin-top: 5%;
+  padding: 1%;
+  background-color: white;
+  
+  border-radius: 0;
+  outline: none;
+  font-weight: 500;
+  margin-left: 7%;
+  width: 100%;
+
+}
+.profileInfotopLeft span{
+padding-left: 8%;
+font-size: 22px;
+} 
+.profileInfoBoxWrapper{
+  height: 100%;
+  padding: 50px 20px;
+  display: flex;
+  align-items:flex-start;
+  justify-content: space-between;
+}
+.profileInfotopLeft li{
+  list-style-type: none;
+  border-bottom: 1px solid rgb(231, 229, 229) !important;
+  margin-top: 15%;
+  padding: 1%;
+  width: 150%;
+}
+
+.logo {
+  /* font-weight: bold; */
+  font-size: 30px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+.formBox{
+  width: 100%;
+}
+.profileInfotopRight{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.profileInfotopLeft{
+  display: flex;
+align-items: flex-start;
+flex-direction: column;
+width: 100%;
+
+
+
+}
+
+
+.actionIcon{
+  font-size: 25px !important;
+  margin-left: 12px;
+  color: #555;
+}
+
+
+
+

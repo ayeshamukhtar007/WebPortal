@@ -1,0 +1,101 @@
+.paymentTb {
+  flex:3;
+  -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+  padding:2%;
+  border-radius: 15px;
+  margin-right: 1%;
+
+}
+
+.paymentTbTitle {
+  background-color: white;
+  position:sticky;
+  z-index: 888;
+  top:0px;
+  font-size: 22px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 3%;
+  align-items: center;
+}
+
+
+.paymentTbTable{
+  width: 100%;
+  border-spacing: 20px;
+  margin-top: 20px;
+ 
+}
+.scrolldiv{
+ 
+  overflow-y:auto;
+  height:80%;
+
+}
+.scrolldiv::-webkit-scrollbar {
+  width: 13px;
+}
+
+.scrolldiv::-webkit-scrollbar-track {
+  background-color: #f2f2f2;
+  border-radius: 2px;
+}
+
+.scrolldiv::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color:rgb(223, 219, 219);
+  box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5);
+}
+.paymentTbTh{
+  text-align: left;
+}
+
+.paymentTbUser{
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+.paymentbtn{
+  top:-8px;
+  margin-left: 70%;
+  box-shadow: 0px 0px 15px -7px #b1b3b4;
+  width: 30%;
+  border: none;
+ background-color: rgb(231, 229, 229);
+ outline: none;
+ 
+ }
+.paymentTbImg {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.paymentTbDate,.paymentTbAmount{
+  font-weight: 300;
+}
+
+.paymentTbButton {
+  padding: 5px 7px;
+  border: none;
+  border-radius: 10px;
+}
+
+.paymentTbButton.Approved{
+    background-color: #e5faf2;
+    color: #3bb077;
+}
+.paymentTbButton.Declined{
+    background-color: #fff0f1;
+    color: #d95087;
+
+}
+.paymentTbButton.Pending{
+    background-color: #ebf1fe;
+    color: #2a7ade;
+
+}

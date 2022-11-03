@@ -1,0 +1,21 @@
+:root {
+  
+  --gradient2: #4C58A4;
+  --gradient1: #44B8EF;
+  --gradient1light: #95d6f5;
+  --gradient2light: #8694ee;
+  --gradientoption1: #21CDFF;
+  --gradientoption2: #5a62f3;
+  --iconcolor: #2c96c7;
+  background-color: rgb(253, 253, 253);
+}
+.maincontainer{
+  display: flex;
+ 
+}
+
+
+.link{
+  text-decoration: none;
+  color: inherit;
+}

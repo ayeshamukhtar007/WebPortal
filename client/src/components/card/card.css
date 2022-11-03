@@ -1,0 +1,78 @@
+.card{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 450px;
+  width: 100%;
+  color: #555;
+  padding: 5%;
+  margin: 10px 15px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 18px -10px rgba(0, 0, 0, 0.75);
+  /* background-image: linear-gradient(to bottom, var(--gradient1) , var(--gradient2)); */
+
+}
+
+.card:hover{
+
+  background-image: linear-gradient(to top, var(--gradient1) , var(--gradient2light));
+  color:white !important;
+  /* box-shadow: 0px 0px 1px -8px rgba(89, 179, 191, 0.75) !important; */
+  box-shadow:  0 0 8px #3abdf5;
+  border:none !important;
+
+}
+.cardWrapper{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  
+}
+
+.cardTitle{
+  align-self: center;
+  font-size: 18px;
+}
+.cardAmount{
+  align-self: center;
+  font-size: 28px;
+
+}
+
+.cardDescription{
+  align-self: center;
+    margin: 30px 30px 20px 30px;
+    word-break: break-all;
+    font-weight: 600;
+}
+.rec-arrow-right{
+  margin-left: 3px !important;
+}
+.serviceCard{
+  padding: 5%;
+
+}
+.cardImg{
+  height:90px;
+  width:70px;
+  align-self: center;
+}
+.rec-dot_active{
+  background-color:var(--gradient2) !important;
+}
+.buyButton{
+  border-color: white !important;
+  padding: 2% 2% !important;
+  border-radius: 50px;
+  width: 40%;
+  border:1px solid White;
+  color: white;
+  background-image: linear-gradient(to right, var(--gradient1) , var(--gradient2));
+  margin:auto;
+  
+}
+.buyButton:hover{
+  
+  background-image: linear-gradient(to right, var(--gradient1light) , var(--gradient2light));
+}

@@ -1,0 +1,56 @@
+@import "../../App.css";
+.sidebar{
+    flex: 0.1;
+    height: 93vh;
+     position: sticky;
+     background-color: rgb(249 249 249);
+     top:50px;
+  
+     
+ }
+
+.sidebarWrapper{
+   
+    color: #555;
+}
+
+/* .sidebarTitle {
+    font-size: 13px;
+    color: rgb(187, 186, 186);
+  } */
+  
+  .sidebarList {
+    margin-top: 0 !important;
+    list-style: none;
+    padding: 0;
+  }
+  .sidebarListItem {
+  
+    padding: 4px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 1px;
+    font-size: 11px;
+ 
+  }
+.active{
+    color: var(--gradient1);
+    border-left: 2px solid var(--gradient1);
+    margin:2px 1px 1px 1px;
+  }
+  
+
+  .sidebarListItem:hover {
+    color: var(--gradient1);
+    background-color: rgba(254, 254, 254, 0.911);
+
+  
+  }  
+  
+  .sidebarIcon{
+    margin-right: 5px;
+    font-size: 20px !important;
+}
+

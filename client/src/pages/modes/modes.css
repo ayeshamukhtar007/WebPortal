@@ -1,0 +1,147 @@
+.view{
+    flex: 4;
+    width: 80%;
+}
+.search-container{
+    margin-top: 25px;
+    margin-left: 77%;
+    display: flex;
+    
+}
+
+.modeTopbar{
+  width: 97%;
+  height: 70px;
+
+  -webkit-box-shadow: 0px 0px 7px -5px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 7px -5px  rgba(0, 0, 0, 0.75);
+  margin-left: 20px;
+  border-radius: 1px;
+}
+.modeIcon{
+  color: #2c96c7 !important;
+  font-size: 35px !important;
+  margin-right: 10px;
+}
+
+.modeTopbarWrapper {
+  height: 100%;
+  padding: 0px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  /* font-weight: bold; */
+  font-size: 30px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.modeTopRight{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.date{
+  margin-top: 10px;
+  font-size: 12px;
+}
+.modeTopLeft{
+  display: flex;
+  align-items:flex-start;
+}
+
+.modeTitle{
+  display: flex;
+  flex-direction: column;
+}
+.topLeftTitle{
+   font-size: 20px;
+   color: #555;
+}
+.topLeftSubTitle{
+  font-size: 15px;
+  color: #555;
+ width:100% !important;
+}
+.actionIcon{
+  font-size: 25px !important;
+  margin-left: 12px;
+  color: #555;
+}
+.topbarIconContainer {
+  position: relative;
+  cursor: pointer;
+  margin-right: 10px;
+  color: rgb(255, 255, 255);
+}
+
+.topIconBadge{
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: -5px;
+    right: 0px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+}
+
+.topAvatar{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.input{
+    width: 90%;
+    border-radius: 18px;
+    height: 35px;
+    padding-left: 15px;
+    border:none;
+    background-color: #2c96c7;
+    -webkit-box-shadow: 0px 0px 20px -10px rgba(36, 102, 202, 0.75);
+    box-shadow: 0px 0px 20px -10px rgba(36, 102, 202, 0.75);;
+  
+}
+
+.modes{
+  margin-top: 1px !important;
+}
+.allmodes{
+  margin-top: 5%;
+  
+}
+.tableStyle{
+  border-radius: 1px !important;
+}
+.detailsTopbar {
+  width: 97%;
+  height: 47px;
+  margin-top:20px;
+  -webkit-box-shadow: 0px 0px 20px -10px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+  margin-left: 20px;
+  border-radius: 5px;
+  background-image: linear-gradient(to right, var(--gradient1) , var(--gradient2));
+ color: white;
+}
+.detailsTopbarWrapper {
+ 
+  height: 100%;
+  padding: 0px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.detailsTitle{
+  font-size: 20px;
+  color: white;
+  font-weight: 400;
+}

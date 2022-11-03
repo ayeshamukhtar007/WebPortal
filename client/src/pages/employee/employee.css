@@ -1,0 +1,97 @@
+.Employee{
+  width: 97%;
+  height: 562px;
+  margin-top:40px;
+  -webkit-box-shadow: 0px 0px 20px -10px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+  margin-left: 20px;
+  border-radius: 15px;
+  display: flex;
+}
+.Employee  .EmployeeImage{
+  width: 200px;
+  height: 150px;
+
+}
+
+.EmployeeWrapper {
+  height: 100%;
+
+  padding: 40px 60px;
+
+}
+
+.SignupTitle,.signup label{
+  font-weight: 500;
+ 
+}
+.Employee .form-control{
+ width: 120%;
+}
+.Employee  input:focus{
+  box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+  
+ }
+ .widgetLgTableEmp{
+  /* width: 97%;
+  border-spacing: 20px;
+  box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+border-radius: 5px;
+margin:2% */
+width: 97%;
+margin:2%;
+padding: 6px 20px !important;
+border-spacing: 20px;
+border-radius: 5px;
+color: white;
+font-size: 18px;
+font-weight: 600;
+background-image: linear-gradient(to right, var(--gradient1) , var(--gradient2));
+
+align-items: center;
+ }
+ .Emview{
+ 
+  box-shadow: 0px 0px 15px -10px rgb(0 0 0 / 75%);
+  padding: 5px;
+  margin:2%
+}
+ .wrapper{
+  box-shadow: 0px 0px 15px -10px rgb(0 0 0 / 75%);
+  padding: 20px;
+}
+ .search-containerEm{
+  margin-top: 25px;
+  margin-left: 77%;
+  display: flex;
+  margin-bottom: 2%;
+}
+ .widgetLgTrEm{
+  margin-top: 20px !important;
+ 
+}
+.Employee .btn{
+  width: 120%;
+  margin-left: 1px;
+  margin-top: 20px;
+}
+.Employee .upload{
+
+  
+  box-shadow: 0px 0px 15px -15px #53cee6;
+  width: 100%;
+  text-align: center;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 2px;
+  align-items: center;
+ 
+  height: 30px !important;
+  background-image: linear-gradient(to right, var(--gradient1) , var(--gradient2));
+ outline: none;
+}
+
+.EMployee .upload:hover {
+  background-image: linear-gradient(to right, var(--gradientoption1) , var(--gradient2light));
+}

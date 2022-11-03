@@ -1,0 +1,31 @@
+.view{
+    flex: 4;
+    width: 80%;
+}
+.search-container{
+    margin-top: 25px;
+    margin-left: 77%;
+    display: flex;
+    
+}
+
+::placeholder {
+    color:white;
+  }
+button{
+  position: relative;
+  margin-left: -35px;
+  border-radius: 18px;
+  border:none;
+  
+}
+.taAIC{
+  display: none;
+}
+.OVvjk{
+  display: none;
+}
+
+.Carousel{
+   margin-top: 3%;
+}

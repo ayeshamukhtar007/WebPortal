@@ -1,0 +1,25 @@
+
+@import "../../App.css";
+
+.secondtopbar {
+  width: 97.5%;
+  height: 40px;
+  position: sticky;
+  top: 60px;
+  z-index: 888;
+  border-radius: 5px;
+  font-size: 20px;
+  background-color: rgb(249 249 249);
+  color: rgb(133, 131, 131);
+  margin-left: 1.3%;
+  padding-top: 3px;
+  font-weight: 600;
+}
+
+.secondtopbarWrapper {
+  height: 100%;
+  padding: 0px 20px;
+   align-items: center;
+ 
+}
+

@@ -1,0 +1,36 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "bcryptjs": "^2.4.3",
+    "buffer": "^6.0.3",
+    "cors": "^2.8.5",
+    "crypto-js": "^4.1.1",
+    "decode-utf8": "^1.0.1",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.2",
+    "firebase-admin": "^11.0.1",
+    "http": "^0.0.1-security",
+    "jsonwebtoken": "^8.5.1",
+    "localtunnel": "^2.0.2",
+    "mongoose": "^6.2.1",
+    "mongoose-ip-address": "^0.0.6",
+    "net": "^1.0.2",
+    "nodemon": "^2.0.15",
+    "ping": "^0.4.2",
+    "rtsp-relay": "^1.6.1",
+    "socket.io": "^4.5.2",
+    "sockette": "^2.0.6",
+    "utf8": "^3.0.0",
+    "websocket": "^1.0.34",
+    "workerpool": "^6.2.1"
+  }
+}

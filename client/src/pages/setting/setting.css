@@ -1,0 +1,72 @@
+.view{
+    flex: 4;
+    width: 80%;
+}
+.settingWrapper{
+  margin-top: 2.5%;
+  display: flex;
+  flex-direction: row;
+  
+  padding-left: 1.5%;
+  padding-right: 0.7%;
+  height:600px;
+  margin-right: 0.5%;
+}
+
+.settingsidebar{
+  flex: 0.8;
+  height: 79vh;
+   position: sticky;
+   background-color: rgb(255, 255, 255);
+   top:50px;
+   box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+   border-radius: 10px;
+   margin-right: 1%;
+
+}
+
+.settingsidebarWrapper{
+ 
+  color: #555;
+}
+
+
+
+.settingsidebarList {
+  margin-top: 0 !important;
+  list-style: none;
+  padding: 0;
+}
+.settingsidebarListItem {
+
+  padding: 10%;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 1px;
+  font-size: 15px;
+  font-weight: 500;
+  height: 50px;
+  border-bottom:1px solid rgb(230, 227, 227);
+}
+.active{
+  color: var(--gradient1);
+  border-left: 2px solid var(--gradient1);
+  margin:2px 1px 1px 1px;
+}
+
+
+.settingsidebarListItem:hover {
+  color: var(--gradient1);
+  border-right: 3px solid var(--gradient1);  
+
+}  
+
+.settingsidebarIcon{
+  margin-right: 5px;
+  font-size: 25px !important;
+}
+.SettingCards{
+  flex:3;
+}
