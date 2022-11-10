@@ -14,13 +14,16 @@ import {
 GroupWork
 } from "@material-ui/icons";
 import {IoPeople} from "react-icons/io5";
-
+import {useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-
+import {RiUser4Fill,RiShoppingBag2Fill,} from "react-icons/ri";
 export default function Sidebar() {
+  const user = useSelector((state) => state.user.currentUser);
+
   return (
     <div className="sidebar">
       <div className="sidebarWrapper">
+        {user!=null?
         <div className="sidebarMenu">
          
           <ul className="sidebarList">
@@ -89,7 +92,71 @@ export default function Sidebar() {
             </Link>
           </ul>
         </div>
-        
+        :
+      //   <div className="sidebarMenu">
+         
+      //   <ul className="sidebarList">
+      //     <Link to="/adminDashboard" className="link">
+      //     <li className="sidebarListItem ">
+          
+      //       <Home className="sidebarIcon" />
+      //       Home
+      //     </li>
+      //     </Link>
+      //     <Link to="/userTable" className="link">
+      //     <li className="sidebarListItem ">
+      //       <RiUser4Fill className="sidebarIcon" />
+      //      Users
+      //     </li>
+      //     </Link>
+      //     <Link to="/Servicetable" className="link">
+      //     <li className="sidebarListItem">
+      //       <RiShoppingBag2Fill className="sidebarIcon" />
+      //       Services
+      //     </li>
+      //     </Link>
+          
+      //   </ul>
+      // </div>
+      <div className="sidebarMenu">
+         
+          <ul className="sidebarList">
+            <Link to="/adminDashboard" className="link">
+            <li className="sidebarListItem ">
+            
+              <Home className="sidebarIcon" />
+              Home
+            </li>
+            </Link>
+            <Link to="/userTable" className="link">
+            <li className="sidebarListItem ">
+              <RiUser4Fill className="sidebarIcon" />
+              Users
+            </li>
+            </Link>
+            <Link to="/Servicetable" className="link">
+            <li className="sidebarListItem">
+              <RiShoppingBag2Fill className="sidebarIcon" />
+              Services
+            </li>
+            </Link>
+            
+           
+            <Link to="/notifications" className="link">
+            <li className="sidebarListItem">
+              <Notifications className="sidebarIcon" />
+              Notifications
+            </li>
+            </Link>
+           
+         
+           
+           
+          
+          
+          </ul>
+        </div>
+        }
       </div>
     </div>
   );

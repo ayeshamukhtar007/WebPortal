@@ -10,8 +10,122 @@ const jwt = require("jsonwebtoken");
 
 const {
   verifyTokenAndAuthorization,
+  verifyTokenAndAdmin,
 } = require("./verifyToken");
 const Attendance = require("../models/attendance");
+router.get('/CountUser',async (req, res) => {
+  User.find().count().exec(function(error, results) {
+       if (error) {
+           return next(error);
+       }
+       console.log(results)
+       res.status(200).json(results);
+   })  ;
+ });
+ router.get('/AllUsers',async (req, res) => {
+  User.find().exec(function(error, results) {
+       if (error) {
+           return next(error);
+       }
+       console.log(results)
+       res.status(200).json(results);
+   })  ;
+ });
+ router.get('/countUserMonthly',async(req,res)=>{
+
+User.aggregate( [
+// {
+//   $match:
+//     {$expr: { $eq:[{ $dateToString: { format: "%Y-%m", date: "$createdAt" }},{ $dateToString: { format: "%Y-%m", date: "new Date()" } }]}},
+
+  
+// },
+  {
+    $group: {
+
+    
+      _id:{ $dateToString: { format: "%Y-%m", date: "$createdAt" } },
+      Totaluser: { $sum: 1 }
+    }
+  },
+  ],
+
+  function(err, result) {
+    if (err) {
+      res.send(err);
+    } else {
+      console.log(result)
+     var t= result.sort(GetSortOrder("_id"));
+    
+      res.json(result);
+    }
+  }
+); 
+  // res.status(200).json(result);
+}
+  )
+  function GetSortOrder(prop) {    
+    return function(a, b) {    
+        if (a[prop] > b[prop]) {    
+            return 1;    
+        } else if (a[prop] < b[prop]) {    
+            return -1;    
+        }    
+        return 0;    
+    }    
+}
+  router.get('/countUserYearly',async(req,res)=>{
+
+    User.aggregate( [
+      {
+        $match: {
+          createdAt:{ $dateToString: { format: "%Y", date: "$createdAt" } },
+        
+        }
+      },
+      {
+        $group: {
+          _id:{ $dateToString: { format: "%Y", date: "$createdAt" } },
+          Totaluser: { $sum: 1 }
+        }
+      },
+      ],
+    
+      function(err, result) {
+        if (err) {
+          res.send(err);
+        } else {
+          console.log(result)
+          res.json(result);
+        }
+      }
+    ); 
+      // res.status(200).json(result);
+    }
+      )
+  router.get('/countUserWeekly',async(req,res)=>{
+
+    User.aggregate( [
+      {
+        $group: {
+          _id:{ $week:"$createdAt"},
+          Totaluser: { $sum: 1 }
+        }
+      },
+      ],
+    
+      function(err, result) {
+        if (err) {
+          res.send(err);
+        } else {
+          console.log(result)
+          res.json(result);
+        }
+      }
+    ); 
+      // res.status(200).json(result);
+    }
+      )
 router.put('/updateUser/:uid', verifyTokenAndAuthorization, function (req, res, next) {
 
   User.findOneAndUpdate({ _id: req.params.uid }, { $set: req.body }, { new: true },

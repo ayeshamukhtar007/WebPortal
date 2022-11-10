@@ -376,6 +376,7 @@ app.use("/api/admin", adminRoute);
 app.use("/api/user", userRoute);
 app.use("/api/alert", alertRoute);
 app.use("/api/service", serviceRoute);
+app.use("/api/admin", adminRoute);
 
 // ;(async () => {
 //   // Init Worker Pool

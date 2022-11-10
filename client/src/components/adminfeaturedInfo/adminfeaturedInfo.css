@@ -1,0 +1,88 @@
+@import "../../App.css";
+.featured {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color:white;
+    flex:4;
+  }
+
+.featuredItem {
+    flex: 1;
+    margin: 30px 20px;
+    padding: 25px 30px 0px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: var(--gradient1);
+    box-shadow: 0px 0px 18px -7px rgba(0, 0, 0, 0.75);
+  
+
+
+}
+
+
+
+.featuredContainer{
+     
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    
+}
+
+.featuredTitle{
+    font-size: 25px;
+    font-weight: 600;
+    padding-bottom: 1%;
+    width:70%;
+}
+
+.featuredCount{
+   
+    margin-left: 20px;
+    font-size: 25px;
+  
+}
+
+.featuredIcon{
+   font-size: 30px !important;
+   margin-right: 10px;
+    color:white !important;
+  
+}
+.featuredSub{
+    font-size: 16px;
+    align-items: center;
+    background-color: var(--gradient2) !important;
+    width: calc(100% + 60px); 
+    box-shadow: 0px 7px 15px -10px rgba(0, 0, 0, 0.75);
+
+    padding: 12px 10px 12px 30px;
+    margin-left: -30px;
+    margin-bottom: -30px;
+    border-radius: 0 0 10px 10px;
+ 
+}
+
+@media only screen and (max-width:1390px ){
+  
+.featuredTitle{
+
+    width:50%;
+}}
+
+@media only screen and (max-width:830px ){
+    .featured {
+        flex-direction: column;
+      }
+   
+}
+
+/* }
+@media only screen and (max-width:1000px ){
+    .featuredTitle{
+        font-size: 14px;
+        
+    }
+} */

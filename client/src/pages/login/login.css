@@ -4,6 +4,7 @@
   z-index: 999;
   
 }
+
 Title,.login label{
   font-weight: 500;
  
@@ -22,14 +23,25 @@ Title,.login label{
   flex-direction: row;
   justify-content: space-between;
 }
-
+.loginToggleWrapper{
+  background-color: #d3cfcf;
+  align-self: center !important;
+  height: 38px;
+  position: absolute;
+  width: 350px;
+  z-index: -1;
+  margin: 9% 25%;
+}
+.blankDiv{
+  height:30px
+}
 .leftWrapper{
  align-self: center;
  background-image: linear-gradient(to right, var(--gradientoption1) , var(--gradient2light));
 text-align: center;
 width:350px;
-height:410px;
-/* padding:5% 2% 2% 2%; */
+height:475px;
+padding:3.5% 2% 2% 2%;
  box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
   border-radius: 15px 0px 0px 15px;
 }

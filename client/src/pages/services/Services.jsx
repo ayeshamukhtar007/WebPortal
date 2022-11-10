@@ -14,10 +14,19 @@ const breakPoints = [
 ];
 export default function Services() {
   const dispatch = useDispatch();
-  const services = (useSelector((state) => state.service.AllServices));
-  useEffect(()=>{
-    GetServices(dispatch);
-   },[]);
+  // const services = (useSelector((state) => state.service.AllServices));
+  const [services,setServices]=useState([]);
+
+useEffect(()=>{
+  GetServices()
+  .then(items=>{
+    console.log(items)
+    setServices(...services,items.data)
+ 
+  })
+
+ 
+  },[]);
  
    const renderList=services.map((service)=>{
     const {_id,title,description,price}=service;

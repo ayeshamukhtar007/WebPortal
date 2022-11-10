@@ -1,7 +1,7 @@
 import React from 'react';
 import './login.css';
 import { useState } from "react";
-import { login } from "../../redux/apiCalls";
+import { Adminlogin, login } from "../../redux/apiCalls";
 import { useDispatch, useSelector } from "react-redux";
 import  'bootstrap/dist/css/bootstrap.min.css';
 import logo from '../../images/logo.png';
@@ -10,26 +10,54 @@ import { requestFirebaseNotificationPermission,onMessageListener } from '../../f
 
 const Login=()=>{
    
+    const [disable, setDisable] = useState(true);
+    const [role, setRole] = useState("user");
+    const [username, setUserName] = useState("");
 
     const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const dispatch = useDispatch();
-  const { isFetching, error,currentuser } = useSelector((state) => state.user);
 
   const handleClick = (e) => {
     e.preventDefault();
-    requestFirebaseNotificationPermission()
-    .then((firebaseToken) => {
-      // eslint-disable-next-line no-console
+    if(role!="user"){
+        var isAdmin,isSuperAdmin;
+        if(role=="CEO"){
+          isAdmin=false;
+        }
+        else{
+            isAdmin=true;
+        }
+         const data={
+            username:username,
+            password:password,
+            isAdmin:isAdmin,
 
-      console.log("jhgjg",firebaseToken);
-      login(dispatch, { email, password,firebaseToken });
-
-    })
+         }
+         console.log(data)
+         Adminlogin(dispatch,data)
+    }
+    else{
+        requestFirebaseNotificationPermission()
+        .then((firebaseToken) => {
+          // eslint-disable-next-line no-console
+    
+          console.log("jhgjg",firebaseToken);
+          login(dispatch, { email, password,firebaseToken });
+    
+        })
+    }
+   }
+  const handleSelection=(e)=>{
+    setDisable(false)
+    console.log(e.target.value)
+    setRole(e.target.value)
+  }
   
-  };
   return(
       <div className='login'>
+        {/* <div className='loginToggleWrapper'>
+        </div> */}
         <div className='loginWrapper'>
            <div className='leftWrapper'>
              
@@ -41,14 +69,39 @@ const Login=()=>{
 <form className='auth-innerlogin'>
           <h3 className='Title'>Sign In</h3>
           <div className="form-group">
-              <label>Email address</label>
-              <input type="email" className="form-control" placeholder="Enter email"
-               onChange={(e) => setEmail(e.target.value)}
+              <label>Role</label>
+              <select class="form-select" value={role} aria-label="Default select example" onChange={handleSelection}>
+                    <option selected>Open this select menu</option>
+                    <option value="CEO">CEO</option>
+                    <option value="user">User</option>
+                    <option value="manager">Manager</option>
+                </select>
+          </div>
+         
+          {role!="user"?
+          <div className="form-group">
+              <label>User Name</label>
+              
+              <input type="text" className="form-control" placeholder="Enter username" 
+               onChange={(e) => setUserName(e.target.value)
+               }
+               
               />
           </div>
+          :
+          <div className="form-group">
+          <label>Email address</label>
+          
+          <input type="email" className="form-control" placeholder="Enter email" 
+           onChange={(e) => setEmail(e.target.value)
+           }
+           
+          />
+      </div>
+          }
           <div className="form-group">
               <label>Password</label>
-              <input type="password" className="form-control" placeholder="Enter password"
+              <input type="password" className="form-control" placeholder="Enter password" 
                onChange={(e) => setPassword(e.target.value)
                 }
                           />
@@ -62,6 +115,7 @@ const Login=()=>{
           <button button type="submit" className="btn btn-primary Signupsubmitbtn"
           onClick={handleClick} >Submit</button>
           {/* {error && <span>Something went wrong...</span>} */}
+        {role=="user" ?
           <div className='Footer'>
           <p className="forgot-password text-right">
               Forgot <a href="#">password?</a>
@@ -73,13 +127,17 @@ const Login=()=>{
                    </Link>
           </p>
           </div>
+          :
+               <div className='blankDiv'></div>
           
+          }
       </form>
 </div>
 
            </div>
       
       </div>
+     
       </div>
   )
 }

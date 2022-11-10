@@ -3,7 +3,7 @@ import userReducer from "./userRedux";
 import cameraReducer from "./cameraRedux";
 import serviceReducer from "./serviceRedux";
 import alertReducer from "./alertRedux";
-
+import adminRedux from "./adminRedux";
 import {
   persistStore,
   persistReducer,
@@ -22,7 +22,7 @@ const persistConfig = {
   storage, 
 };
 
-const rootReducer = combineReducers({ user: userReducer , camera: cameraReducer, service: serviceReducer,alert: alertReducer });
+const rootReducer = combineReducers({ user: userReducer ,admin :adminRedux, camera: cameraReducer, service: serviceReducer,alert: alertReducer });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 

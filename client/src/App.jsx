@@ -21,8 +21,14 @@ import VideoPlaying from './pages/videoPlaying/VideoPlaying';
 import Setting from './pages/setting/Setting';
 import Employee from './pages/employee/Employee';
 import TrackStream from './pages/trackStream/TrackStream';
+import AdminDashboard from './pages/adminDashboard/AdminDashboard';
+import ServiceList from './pages/serviceList/ServiceList';
+import Servicetable from './pages/ServiceTable/ServiceTable';
+import EditService from './pages/editService/EditService';
+import UserTable from './pages/userTable/UserTable';
 function App() {
   const user = useSelector((state) => state.user.currentUser);
+  const admin = useSelector((state) => state.admin.current);
 
   return (
     
@@ -30,26 +36,30 @@ function App() {
   <Router>
       
 
-        {user ? <Topbar/> : <Redirect to="/login"/> }
+        {admin ? <Topbar/> : <Redirect to="/login"/> }
         <div className="maincontainer">
-          {user ?<Sidebar/> : <Redirect to="/login"/> }
+          {admin||user ?<Sidebar/> : <Redirect to="/login"/> }
 
             <Switch>
             <Route exact path="/signup">
             
-            {user ? <Redirect to="/" /> : <Signup/>}
+            {admin||user ? <Redirect to="/" /> : <Signup/>}
 
         </Route>
         
               <Route exact path='/'>
-              {user ?  <Home /> : <Redirect to="/login" /> }
+              {user ?  <Home /> : <Redirect to="/login" /> } 
                
             </Route>
-          
+          <Route exact path='/adminDashboard'>
+              {admin ?  <AdminDashboard /> : <Redirect to="/login" /> }
+               
+            </Route>
             <Route exact path='/setting'>
-              {user ?  <Setting/> : <Redirect to="/login" /> }
+              {user ?  <Setting/> : <Redirect to="/login" /> } //for setting
                
             </Route>
+            
             <Route exact path='/liveView' >
             {user ?  <LiveView/> : <Redirect to="/login" /> }
                
@@ -58,10 +68,23 @@ function App() {
             {user ?  <TrackStream/> : <Redirect to="/login" /> }
                
             </Route>
+            <Route exact path='/userTable' >
+            {admin ?  <UserTable/> : <Redirect to="/login" /> }
+               
+            </Route>
+            <Route exact path='/Servicetable' >
+            {admin ?  <Servicetable/> : <Redirect to="/login" /> }
+               
+            </Route>
+            <Route exact path='/EditService/:sid' >
+            {admin ?  <EditService/> : <Redirect to="/login" /> }
+               
+            </Route>
             <Route exact path='/recording'>
             {user ?  <Recording/> : <Redirect to="/login" /> }
                
             </Route>
+           
          
                <Route exact path='/videoPlaying'>
             {user ?  <VideoPlaying/> : <Redirect to="/login" /> }
@@ -89,7 +112,10 @@ function App() {
             </Route>
             <Route path="/login">
            
-              {user ? <Redirect to="/" /> : <Login/>}</Route>
+              {admin && user==null ? <Redirect to="/adminDashboard" /> : <Login/>
+              }
+              {user && admin==null ? <Redirect to="/" /> : <Login/>}
+              </Route>
         
           <Route exact path="/logout">
      
